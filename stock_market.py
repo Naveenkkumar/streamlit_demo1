@@ -11,10 +11,8 @@ user_input_start_date = st.date_input("Enter the start date", value=pd.to_dateti
 user_input_end_date = st.date_input("Enter the end date")
 
 ticker_data = yf.Ticker(user_input_symbol)
-df = ticker_data.history(period="1d", start="2021-5-1", end="2021-5-10")
+df = ticker_data.history(period="1d", start=user_input_start_date, end=user_input_end_date)
 st.write("Stock Market Data of Apple", df)
-
-
 
 
 col1, col2 = st.columns(2)
