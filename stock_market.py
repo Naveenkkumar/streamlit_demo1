@@ -25,3 +25,4 @@ with col2:
     st.write("This is closing price chart")
     st.line_chart(df.Close)
 
+st.write("This is the end of the website")
